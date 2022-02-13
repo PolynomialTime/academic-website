@@ -7,18 +7,21 @@
 
 <html lang="en">
 <head>
-  <title>John Doe</title>
+  <title>Yang Chen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "https://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="./css/firstcss.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-
-
-<!-- Navigation -->
+  <!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
@@ -34,74 +37,183 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
 				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
+				  <!-- <li><a href="#">Projects</a></li> -->
 				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#awards">Awards</a></li>
 		  </ul>
 		</div>
 	  </div>
 	</nav>
-  
+
+ 
   <!-- Page Content -->
-    <div class="container">
-
+    <div class="container" style="padding-top: 60px;">
+        <!-- Profile -->
         <div class="row">
-
             <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
+            <div class="col-md-4"> <!-- </div> style="height: 100vh;"> -->
                 <!-- Main Image -->
-                <img class="img-responsive" src="photo.gif" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
+                <img class="img-responsive" src="./img/portarit.jpg" width="220" alt="">
+                <br>
+                <!-- <div style="margin-top:3%; text-align:justify;">  -->              
             </div> 
-
             <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>John Doe</b></div><br>
-                <p><b>john at doe.com</b><br>
-                <p>Random Department<br>
-                University of Randomness<br>
-                Street<br>
-                City <br>
-                Country<br>
+            <div class="col-md-8">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yang Chen</b></div><br>
+                <p>Research Fellow<br>
+                School of Computer Science<br>
+                The University of Auckland<br>
                 </p>
+                <p>
+                  <a href="./static/CV/cv.pdf">CV</a> &nbsp | &nbsp
+                  <a href="mailto:yang.chen@auckland.ac.nz">Email</a>&nbsp | &nbsp
+                  <a href="https://www.linkedin.com/in/yang-chen-93a28321a/">LinkedIn</a> &nbsp | &nbsp
+                  <a href="https://scholar.google.co.nz/citations?user=3pShVqUAAAAJ&hl=en">Google Scholar</a> &nbsp | &nbsp
+                  <a href="https://www.researchgate.net/profile/Yang-Chen-67">Research Gate</a> 
+                  <br>
+              </p>
             </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="#">Google Scholar</a></dd> 
-              <dd><a href="#">Twitter</a></dd>
-              <dd><a href="#">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-            </div>
-
-            
+        </div>
+        
+        <!-- Bio -->
+        <div class="row" style="text-align:justify;">
+          <div class="col-md-9">
+            Yang Chen is currently a research fellow with the School of Computer Science, <a href="https://www.auckland.ac.nz/">The University of Auckland</a>. 
+            He obtained his Ph.D. in computer science from <a href="https://www.auckland.ac.nz/">The University of Auckland</a>, where he was supervised by Dr. <a href="https://www.liuailab.org/">Jiamou Liu</a> and Prof. <a href="https://www.cs.auckland.ac.nz/~bmk/">Bakhadyr Khoussainov</a>. 
+            He received the First Class Honours degree in computer science from The University of Auckland in 2018. He received the B.S. in computer science from <a href="http://www.bit.edu.cn/index.htm">Beijing Institute of Technology</a> in 2017.
+            His research interests span a spectrum of (inverse) reinforcement learning, computional game theory and multi-agent systems. Lately his research focus is on applying reinforcement learning to automatic reasoning and proving.
+          </div>
         </div>
 
+        <!-- Publications -->    
+        <div class="row">
+            <div class="col-md-9">    
+                <h2 id="publications" class="hreflink">Publications</h2>
+                <p>In cases that <span class="nf">publisher links</span> are non-free, please refer to the <span class="free">arXiv</span> versions. Talks, presentation slides, videos, codes and other <span class="aux">extra materials</span> are sometimes included. 
+                <span style="color: rgb(202, 75, 58);">Awards</span> are highlighted where available.</p>
+                <h4>Conferences</h4>
+                <ul class="vert">
+                  <li>
+                    <strong>Interconnected Neural Linear Contextual Bandits with UCB Exploration</strong>.<br>
+                    Yang Chen, Miao Xie, Jiamou Liu, Kaiqi Zhao.<br>
+                    The 26th Pacific-Asia Conference on Knowledge Discovery and Data Mining.<br>
+                    <a class="nf" href="">PAKDD 2022</a>
+                  </li>
+                  <li>
+                    <strong>Individual-Level Inverse Reinforcement Learning for Mean Field Games</strong>.<br>
+                    Yang Chen, Libo Zhang, Jiamou Liu, Shuyue Hu.<br>
+                    The 21st International Conference on Autonomous Agents and Multi-agent Systems.<br>
+                    <a class="nf" href="">AAMAS 2022</a> | 
+                    <a class="free" href="">arXiv</a>
+                  </li>
+                  <li>
+                    <strong>Social Capital Games as A Framework for Social Structural Pattern Emergence</strong>.<br>
+                    Yang Chen, Jiamou Liu.<br>
+                    2020 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining.<br>
+                    <a class="nf" href="https://web.ntpu.edu.tw/~myday/doc/ASONAM2020/ASONAM2020_Proceedings/pdf/papers/049_064_309.pdf">ASONAM 2020</a>
+                  </li>
+                  <li>
+                    <strong>Social Structure Emergence: A Multi-agent Reinforcement Learning Framework for Relationship Building</strong>.<br>
+                    Yang Chen, Jiamou Liu, He Zhao, Hongyi Su.<br>
+                    The 19th International Conference on Au- tonomous Agents and Multi-agent Systems.<br>
+                    <a class="nf" href="http://www.ifaamas.org/Proceedings/aamas2020/pdfs/p1807.pdf">AAMAS 2020</a> |
+                    <a class="aux" href="./static/slides/aamas2020.pdf">Slides</a> |
+                    <a class="aux" href="https://underline.io/lecture/142-mechanism-design-for-defense-coordination-in-security-games">Talk</a>
+                  </li>
+                  <li>
+                    <strong>Becoming Gatekeepers Together with Allies: Collaborative Brokerage over Social Networks</strong>.<br>
+                    Yang Chen, Jiamou Liu. <br>
+                    2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining.<br>
+                    <a class="nf" href="https://asonamdata.com/ASONAM2019_Proceedings/pdf/papers/011_0081_014.pdf">ASONAM 2019</a> |
+                    <a class="aux" href="https://github.com/PolynomialTime/ASONAM2019">Code</a>
+                  </li>
+                  <li>
+                    <strong>A Reinforcement Learning Approach to Gaining Social Capital with Partial Observation</strong>.<br>
+                    He Zhao, Hongyi Su, Yang Chen (contact), Jiamou Liu, Hong Zheng, Bo Yan.<br>
+                    The 16th Pacific Rim International Conference on Artificial Intelligence.<br>
+                    <a class="nf" href="https://link.springer.com/chapter/10.1007/978-3-030-29908-8_9">PRICAI 2019</a> 
+                  </li>
+                  <li>
+                    <strong>Dynamic Relationship Building: Exploitation Versus Exploration on a Social Network</strong>.<br>
+                    Bo Yan, Yang Chen, Jiamou Liu.<br>
+                    The 18th International Conference on Web Information Systems Engineering.<br>
+                    <a class="nf" href="https://link.springer.com/chapter/10.1007/978-3-319-68783-4_6">WISE 2017</a> |
+                    <a class="aux" href="https://github.com/PolynomialTime/WISE2017">Code</a>
+                  </li>
+                </ul>
+            
+                <h4>Workshops</h4>
+                <ul class="vert">
+                  <li>
+                    <strong>Can Reinforcement Learning Enhance Social Capital?</strong>. <br>
+                    He Zhao, Hongyi Su, Yang Chen, Jiamou Liu, Bo Yan, Hong Zheng.<br>
+                    The International Workshop on Web Information Systems in the Era of AI.<br>
+                    <a class="nf" href="https://link.springer.com/chapter/10.1007/978-981-15-3281-8_14">PDF</a>
+                  </li>
+                  <li>
+                    <strong>Distributed Community Detection over Blockchain Networks Based on Structural Entropy</strong>.<br>
+                    Yang Chen, Jiamou Liu.<br>
+                    The 2019 ACM International Symposium on Blockchain and Secure Critical Infrastructure.<br>
+                    <a class="award" href="http://www.cloud-conf.net/bsci/2019/">Best Paper Award</a> |
+                    <a class="nf" href="https://link.springer.com/chapter/10.1007/978-981-15-3281-8_14">BSCI 2019</a>
+                  </li>
+                </ul>
 
+                <h4>Preprints</h4>
+                <ul class="vert">
+                  <li>
+                    <strong>Adversarial Inverse Reinforcement Learning for Mean Field Games</strong>.<br>
+                    Yang Chen, Jiamou Liu.<br>
+                    <a class="free" href="https://arxiv.org/abs/2104.14654">arXiv</a>
+                  </li>
+                </ul>
+            </div>     
+        </div>
+        
+        <!-- Experience -->
+        <div class="row">
+          <div class="col-md-9">    
+              <h2 id="experience" class="hreflink">Experience</h2>
+              <table>
+                <tr>
+                  <td>June 2021 -- Present</td>
+                  <td>Research Fellow</td>
+                  <td><a href="https://www.auckland.ac.nz/">The University of Auckland</a></td>
+                </tr>
+                <tr>
+                  <td>September 2020 -- January 2021</td>
+                  <td>Research Intern</td>
+                  <td><a href="https://damo.alibaba.com">Alibaba DAMO Academy</a></td>
+                </tr>
+              </table>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="row">
+          <div class="col-md-9">    
+              <h2 id="awards" class="hreflink">Awards</h2>
+              <table>
+                <tr>
+                  <td>August 2020</td>
+                  <td>Google Global PhD Fellowship Nomination (Austrilia & New Zealand)</td>
+                </tr>
+                <tr>
+                  <td>July 2019</td>
+                  <td>Best Paper Award, <a href="http://www.cloud-conf.net/bsci/2019/">BSCI 2019</a></td>
+                </tr>
+                <tr>
+                  <td>July 2019</td>
+                  <td>Summer scholarship funding from the <a href="https://precisiondrivenhealth.com">Precision Driven Health</a>research partnership</td>
+                </tr>
+                <tr>
+                  <td>October 2018</td>
+                  <td>Ph.D. Scholarship, <a href="https://www.auckland.ac.nz/">The University of Auckland</a></td>
+                </tr>
+              </table>
+          </div>
+        </div>
     </div>
     <!-- /.container -->
     
