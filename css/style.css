@@ -73,6 +73,7 @@ a.aux:link, a.aux:visited, .aux {
     text-align: center;
     display: inline-block;
     position:relative;
+    z-index: 999;
 }
 a.aux:hover, a.aux:active {
     background-color: #0671b300;
