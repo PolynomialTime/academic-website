@@ -50,7 +50,7 @@ a.free:link, a.free:visited, .free {
     display: inline-block;
     position:relative;
 }
-a.free:hover, a.free:active, {
+a.free:hover, a.free:active {
     background-color: #0671b3;
 }
 a.talk:link, a.talk:visited, .talk {
@@ -62,7 +62,7 @@ a.talk:link, a.talk:visited, .talk {
     display: inline-block;
     position:relative;
 }
-a.talk:hover, a.talk:active, {
+a.talk:hover, a.talk:active {
     background-color: #1e960b;
 }
 a.aux:link, a.aux:visited, .aux {
