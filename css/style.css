@@ -53,9 +53,9 @@ a.free:link, a.free:visited, .free {
     position:relative;
     z-index: 999;
 }
-a.free:hover, a.free:active {
+/** a.free:hover, a.free:active {
     background-color: #92431e;
-}
+} **/
 a.talk:link, a.talk:visited, .talk {
     color: #1e960b;
     padding: 0px 3px;
