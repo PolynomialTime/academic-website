@@ -27,12 +27,12 @@
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		  <button type="button" class="navbar-toggle collapsed" id="collapse" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
+			</button>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,7 +40,7 @@
 		  <ul class="nav navbar-nav">
 				  <li><a href="index.html">Home</a></li>
 				  <!-- <li><a href="#">Projects</a></li> --> 
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#experience" onclick="$('.collapse').collapse();">Experience</a></li>
           <li><a href="#tutorials">Tutorials & Keynotes</a></li>
           <li><a href="#teaching">Teaching</a></li>
           <li><a href="#services">Academic Services</a></li>
