@@ -21,7 +21,6 @@ a.paragraph, a.paragraph:visited, .paragraph{
     text-decoration: none;
     display: inline-block;
     position:relative;
-    border: 1.5px solid #a2834e;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     -ms-border-radius: 6px;
