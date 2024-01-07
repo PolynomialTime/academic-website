@@ -308,3 +308,7 @@ td, th {
     }
 
 }
+
+.vector-icon.mw-ui-icon-wikimedia-language-progressive {
+    background-image: url(/w/load.php?modules=skins.vector.icons&image=language&variant=progressive&format=original&lang=en&skin=vector-2022&version=3ht3e);
+    }
