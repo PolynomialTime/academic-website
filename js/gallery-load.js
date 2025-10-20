@@ -12,6 +12,11 @@
 
   const container = document.createElement('div');
   container.className = 'rt-container';
+  const colRtDiv = document.createElement('div');
+  colRtDiv.className = 'col-rt-12';
+  const scriptContent =document.createElement('div');
+  scriptContent.className = 'Scriptcontent';
+
   // Insert each section
   data.forEach(section => {
     const sec = document.createElement('section');
@@ -46,14 +51,9 @@
     });
 
     sec.appendChild(gallery);
-    container.appendChild(sec);
+    scriptContent.appendChild(sec);
   });
-
-  // Replace placeholder element in page
-  const placeholder = document.getElementById('gallery-data');
-  if (placeholder) {
-    placeholder.replaceWith(container);
-  } else {
-    document.querySelector('.Scriptcontent')?.appendChild(container);
-  }
+  colRtDiv.appendChild(scriptContent);
+  container.appendChild(colRtDiv);
+  document.body.appendChild(container);
 })();
