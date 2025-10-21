@@ -34,7 +34,7 @@
       img.className = 'thumb placeholder';
       img.src = item.src;
       img.setAttribute('data-src', item.src);
-      img.setAttribute('data-image', item.image || item.src);
+      img.setAttribute('data-image', item.src);
       if (item.longTitle) img.setAttribute('data-title', item.longTitle);
       if (item.alt) img.alt = item.alt;
       if (item.title) {
