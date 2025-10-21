@@ -32,7 +32,8 @@
 
       const img = document.createElement('img');
       img.className = 'thumb placeholder';
-      img.src = item.src;
+      // img.src = item.src;
+      img.setAttribute('src', item.src);
       img.setAttribute('data-src', item.src);
       img.setAttribute('data-image', item.src);
       if (item.longTitle) img.setAttribute('data-title', item.longTitle);
