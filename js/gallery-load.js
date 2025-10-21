@@ -27,13 +27,12 @@
     gallery.className = 'gallery';
 
     (section.items || []).forEach(item => {
-      const wrap = document.createElement('div');
-      wrap.className = 'gallery-item ' + (item.sizeClass || 'item-1x1');
+      const gallery_item = document.createElement('div');
+      gallery_item.className = 'gallery-item ' + (item.sizeClass || 'item-1x1');
 
       const img = document.createElement('img');
       img.className = 'thumb placeholder';
-      // img.src = item.src;
-      img.setAttribute('src', item.src);
+      img.src = item.src;
       img.setAttribute('data-src', item.src);
       img.setAttribute('data-image', item.src);
       if (item.longTitle) img.setAttribute('data-title', item.longTitle);
@@ -44,11 +43,11 @@
         const span = document.createElement('span');
         span.textContent = item.title;
         cap.appendChild(span);
-        wrap.appendChild(cap);
+        gallery_item.appendChild(cap);
       }
 
-      wrap.appendChild(img);
-      gallery.appendChild(wrap);
+      gallery_item.appendChild(img);
+      gallery.appendChild(gallery_item);
     });
 
     sec.appendChild(gallery);
