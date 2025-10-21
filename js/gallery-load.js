@@ -1,10 +1,10 @@
-(async function(){
+(function(){
   const url = '/gallery-images.json'; // adjust path if needed
   let data = [];
   try {
-    const res = await fetch(url, { cache: 'no-cache' });
+    const res = fetch(url, { cache: 'no-cache' });
     if (!res.ok) throw new Error('Fetch failed ' + res.status);
-    data = await res.json();
+    data = res.json();
   } catch (e) {
     console.error('Could not load gallery JSON:', e);
     return;
