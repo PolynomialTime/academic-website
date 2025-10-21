@@ -37,7 +37,7 @@
       img.setAttribute('data-src', item.src);
       img.setAttribute('data-image', item.src);
       if (item.longTitle) img.setAttribute('data-title', item.longTitle);
-      if (item.alt) img.alt = item.alt;
+      if (item.alt) img.setAttribute('alt', item.alt);
       if (item.title) {
         const cap = document.createElement('div');
         cap.className = 'caption';
