@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Concise Introduction to LLM-based Multi-agent Systems | AAMAS 2026 Tutorial</title>
+  <meta name="description" content="Tutorial page for AAMAS 2026: A Concise Introduction to LLM-based Multi-agent Systems." />
+  <style>
+    :root {
+      --bg: #f3f6fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #4a5872;
+      --line: #d9e2f0;
+      --accent: #0b4db4;
+      --accent-soft: #eaf1ff;
+      --shadow: 0 10px 30px rgba(17, 39, 83, 0.08);
+      --radius: 16px;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 500px at 5% -10%, #dde9ff 0%, transparent 60%),
+        radial-gradient(900px 500px at 110% -30%, #d4f3eb 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f2f75 0%, #0d478f 55%, #1a6e9e 100%);
+      color: #f6f9ff;
+      border-radius: 20px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3.7vw, 2.35rem);
+      line-height: 1.25;
+      max-width: 880px;
+    }
+
+    .meta {
+      margin-top: 12px;
+      font-size: 0.98rem;
+      opacity: 0.95;
+    }
+
+    .conf-link {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #f6f9ff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 8px 10px;
+    }
+
+    .conf-link:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .conf-logo {
+      width: 110px;
+      height: auto;
+      display: block;
+    }
+
+    .conf-text {
+      font-size: 0.9rem;
+      line-height: 1.3;
+      opacity: 0.95;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(16, 34, 69, 0.04);
+      margin-top: 16px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.13rem;
+      color: #10264f;
+    }
+
+    p { margin: 0; }
+
+    .text-muted { color: var(--muted); }
+
+    .outline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+    }
+
+    .step-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .step-title {
+      font-weight: 600;
+      color: #0d2d69;
+    }
+
+    .step-time {
+      font-size: 0.88rem;
+      color: #33517d;
+      background: var(--accent-soft);
+      border: 1px solid #caddff;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    ul {
+      margin: 6px 0 0 1.2rem;
+      padding: 0;
+    }
+
+    .break {
+      border-left: 3px solid var(--accent);
+      padding: 8px 10px;
+      margin-top: 4px;
+      color: #1f3f73;
+      background: #f4f8ff;
+      border-radius: 8px;
+      font-size: 0.93rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      font-size: 0.86rem;
+      color: #12386f;
+      background: #edf4ff;
+      border: 1px solid #d4e4ff;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .avatar {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid #d8e5ff;
+      box-shadow: 0 6px 16px rgba(15, 47, 117, 0.12);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 1.03rem;
+      color: #10264f;
+    }
+
+    .role {
+      margin: 2px 0 10px;
+      font-size: 0.9rem;
+      color: #33517d;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .links a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero { padding: 22px 18px; }
+      section { padding: 16px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="badge">AAMAS 2026 Tutorial</div>
+      <h1>A Concise Introduction to LLM-based Multi-agent Systems</h1>
+      <p class="meta">
+        <strong>Presenters:</strong> Yang Chen, Shuyue Hu<br />
+        <strong>Conference:</strong> AAMAS 2026, Paphos, Cyprus<br />
+        <strong>Date:</strong> May 25-29, 2026 · <strong>Format:</strong> Half-day tutorial (3.5 hours technical content)
+      </p>
+      <a class="conf-link" href="https://cyprusconferences.org/aamas2026/" target="_blank" rel="noopener noreferrer" aria-label="Visit AAMAS 2026 website">
+        <img class="conf-logo" src="https://cyprusconferences.org/aamas2026/wp-content/uploads/2025/12/LOGO_25YEARS_AAMAS-2026.png" alt="AAMAS 2026 logo" />
+        <span class="conf-text">Official AAMAS 2026 Website</span>
+      </a>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p class="text-muted">
+        This tutorial provides a concise, agent-centric introduction to LLM-based multi-agent systems (MAS), with an emphasis on the interplay between large language models and classical multi-agent principles. We discuss how multi-agent mechanisms such as debate, role specialization, coordination protocols, and strategic interaction improve reliability and robustness beyond single-agent LLM settings, and how LLMs can serve as infrastructure for communication and coordination in MAS.
+      </p>
+    </section>
+
+    <section>
+      <h2>Detailed Outline</h2>
+      <div class="outline">
+        <article class="step">
+          <div class="step-head">
+            <div class="step-title">Part I: Foundations of LLMs and LLM-based Agents</div>
+            <div class="step-time">1 hour</div>
+          </div>
+          <ul>
+            <li>Agent abstraction: policy, memory, and interaction loop</li>
+            <li>Single-agent LLMs as decision-making entities</li>
+            <li>Roles of LLMs in agents: priors, planners, and reasoning modules</li>
+            <li>From single-agent to multi-agent systems</li>
+          </ul>
+          <div class="break">Break: 10 minutes</div>
+        </article>
+
+        <article class="step">
+          <div class="step-head">
+            <div class="step-title">Part II: Multi-Agent Systems for LLMs</div>
+            <div class="step-time">1 hour</div>
+          </div>
+          <ul>
+            <li>Limitations of single LLM agents: hallucination, myopia, bias, and brittle reasoning</li>
+            <li>Debate, deliberation, and critique for improved reasoning reliability</li>
+            <li>Redundancy, voting, and consensus for robustness</li>
+          </ul>
+          <div class="break">Break: 10 minutes</div>
+        </article>
+
+        <article class="step">
+          <div class="step-head">
+            <div class="step-title">Part III: LLMs for Multi-Agent Systems</div>
+            <div class="step-time">1 hour</div>
+          </div>
+          <ul>
+            <li>Advantages of LLMs as infrastructure for MAS</li>
+            <li>Language-mediated coordination and communication</li>
+            <li>Connections to mechanism design, learning in games, and collective decision-making</li>
+          </ul>
+          <div class="break">Break: 10 minutes</div>
+        </article>
+
+        <article class="step">
+          <div class="step-head">
+            <div class="step-title">Part IV: Open Challenges and Future Directions</div>
+            <div class="step-time">30 minutes</div>
+          </div>
+          <ul>
+            <li>Evaluation of interactive, deliberative, and strategic agent systems</li>
+            <li>Scalability in agent number, interaction length, and reasoning depth</li>
+            <li>Efficient communication in LLM-based agents</li>
+            <li>Open theoretical questions at the intersection of MAS and LLMs</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Audience and Prerequisites</h2>
+      <p class="text-muted">
+        The tutorial is designed for researchers, practitioners, and advanced graduate students in multi-agent systems, machine learning, and AI.
+      </p>
+      <div class="chips">
+        <span class="chip">Basic familiarity with agents and multi-agent systems</span>
+        <span class="chip">Introductory machine learning or reinforcement learning</span>
+        <span class="chip">No prior LLM experience required</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Presenters</h2>
+      <div class="grid">
+        <article class="card">
+          <img class="avatar" src="../../img/yang.jpg" alt="Portrait of Yang Chen" />
+          <h3 class="name">Yang Chen</h3>
+          <p class="role">Shanghai AI Lab, Shanghai, China</p>
+          <p class="text-muted">
+            Research focus: reinforcement learning for LLMs, reward modeling, and LLM-based multi-agent systems. Active contributor to the AAMAS community.
+          </p>
+          <p class="links">
+            Email: <a href="mailto:chenyang4@pjlab.org.cn">chenyang4@pjlab.org.cn</a><br />
+            Website: <a href="https://www.yangchen.info/" target="_blank" rel="noopener noreferrer">yangchen.info</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <img class="avatar" src="./shuyuehu.jpg" alt="Portrait of Shuyue Hu" />
+          <h3 class="name">Shuyue Hu</h3>
+          <p class="role">Shanghai AI Lab, Shanghai, China</p>
+          <p class="text-muted">
+            Research focus: multi-agent systems, LLMs, and game theory, including multi-agent debate, routing, and emergent behaviors in LLM-based MAS.
+          </p>
+          <p class="links">
+            Email: <a href="mailto:hushuyue@pjlab.org.cn">hushuyue@pjlab.org.cn</a><br />
+            Website: <a href="https://shuyuehu.github.io" target="_blank" rel="noopener noreferrer">shuyuehu.github.io</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p class="text-muted">
+        Corresponding presenter: Yang Chen
+      </p>
+      <p class="links">
+        <a href="mailto:chenyang4@pjlab.org.cn">chenyang4@pjlab.org.cn</a> ·
+        <a href="mailto:yang.chen.csphd@gmail.com">yang.chen.csphd@gmail.com</a>
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Tutorial Team · AAMAS 2026
+    </footer>
+  </main>
+</body>
+</html>
