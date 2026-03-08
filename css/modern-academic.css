@@ -27,20 +27,21 @@ body {
 .navbar.navbar-inverse {
   background: rgba(250, 250, 252, 0.72);
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 0;
   backdrop-filter: saturate(180%) blur(18px);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
   position: sticky;
   top: 0;
   z-index: 1000;
   margin-bottom: 0;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: none;
 }
 
 .navbar-inverse .navbar-nav > li > a {
   color: rgba(29, 29, 31, 0.88);
   font-size: 13px;
-  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   letter-spacing: -0.01em;
   transition: color 0.2s ease, opacity 0.2s ease;
   text-align: center;
@@ -253,40 +254,159 @@ ul.vert > li {
   font-weight: 600;
 }
 
-.free,
+.free {
+  color: #0066cc !important;
+}
+
+.nf {
+  color: #6e5500 !important;
+}
+
+.aux {
+  color: #008060 !important;
+}
+
+.award {
+  color: #b00020 !important;
+}
+
 a.free,
+a.nf,
+a.aux,
+a.award,
+a.github,
+a.free:link,
+a.nf:link,
+a.aux:link,
+a.award:link,
+a.github:link,
 a.free:visited,
+a.nf:visited,
+a.aux:visited,
+a.award:visited,
+a.github:visited,
+a.free:hover,
+a.nf:hover,
+a.aux:hover,
+a.award:hover,
+a.github:hover,
+a.free:active,
+a.nf:active,
+a.aux:active,
+a.award:active,
+a.github:active {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box !important;
+  height: 36px !important;
+  padding: 0 16px !important;
+  margin: 2px 2px;
+  border-radius: 999px;
+  border: 1px solid;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1 !important;
+  vertical-align: middle;
+  letter-spacing: -0.01em;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+a.free,
+a.nf,
+a.aux,
+a.github,
+a.free:visited,
+a.nf:visited,
+a.aux:visited,
+a.github:visited {
+  min-width: 88px;
+}
+
+a.free,
+a.free:visited {
+  color: #0066cc !important;
+  border-color: rgba(0, 102, 204, 0.28) !important;
+  background: rgba(0, 102, 204, 0.1) !important;
+}
+
+a.nf,
+a.nf:visited {
+  color: #7a5600 !important;
+  border-color: rgba(122, 86, 0, 0.28) !important;
+  background: rgba(122, 86, 0, 0.1) !important;
+}
+
+a.aux,
+a.aux:visited {
+  color: #0f7a62 !important;
+  border-color: rgba(15, 122, 98, 0.28) !important;
+  background: rgba(15, 122, 98, 0.1) !important;
+}
+
+a.award,
+a.award:visited {
+  color: #b00020 !important;
+  border-color: rgba(176, 0, 32, 0.28) !important;
+  background: rgba(176, 0, 32, 0.1) !important;
+}
+
+a.github,
+a.github:visited {
+  color: #ffffff !important;
+  border-color: #1f2328 !important;
+  background: #1f2328 !important;
+}
+
+a.free:hover,
+a.nf:hover,
+a.aux:hover,
+a.award:hover,
+a.github:hover,
+a.free:active,
+a.nf:active,
+a.aux:active,
+a.award:active,
+a.github:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 a.free:hover,
 a.free:active {
-  color: #0066cc !important;
-  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #0066cc !important;
+  background: #0066cc !important;
 }
 
-.nf,
-a.nf,
-a.nf:visited,
 a.nf:hover,
 a.nf:active {
-  color: #6e5500 !important;
-  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #7a5600 !important;
+  background: #7a5600 !important;
 }
 
-.aux,
-a.aux,
-a.aux:visited,
 a.aux:hover,
 a.aux:active {
-  color: #008060 !important;
-  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #0f7a62 !important;
+  background: #0f7a62 !important;
 }
 
-.award,
-a.award,
-a.award:visited,
 a.award:hover,
 a.award:active {
-  color: #b00020 !important;
-  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #b00020 !important;
+  background: #b00020 !important;
+}
+
+a.github:hover,
+a.github:active {
+  color: #ffffff !important;
+  border-color: #0d1117 !important;
+  background: #0d1117 !important;
 }
 
 @media (max-width: 991px) {

@@ -44,6 +44,7 @@
 				  <li><a href="index.html" style="text-align: center;">Home</a></li>
 				  <!-- <li><a href="#">Projects</a></li> --> 
           <li><a href="#experience" style="text-align: center;"  onclick="$('.collapse').collapse('hide');">Experience</a></li>
+          <li><a href="#projects"  style="text-align: center;"  onclick="$('.collapse').collapse('hide');">Projects</a></li>
           <li><a href="#tutorials"  style="text-align: center;"  onclick="$('.collapse').collapse('hide');">Talks</a></li>
           <li><a href="#teaching"   style="text-align: center;"  onclick="$('.collapse').collapse('hide');">Teaching</a></li>
           <li><a href="#grants"     style="text-align: center;"  onclick="$('.collapse').collapse('hide');">Grants</a></li>
@@ -65,7 +66,7 @@
             <!-- Entries Column -->
             <div class="col-md-4"> <!-- </div> style="height: 100vh;"> -->
                 <!-- Main Image -->
-                <img class="img-responsive" src="./img/1.jpg" width="220" alt="">
+                <img class="img-responsive" src="./img/portrait.jpg" width="220" alt="">
                 <br>
                 <!-- <div style="margin-top:3%; text-align:justify;">  -->              
             </div> 
@@ -157,6 +158,29 @@
                   <td><a class="paragraph" href="https://english.bit.edu.cn">Beijing Institute of Technology</a></td>
                 </tr>
               </table>
+          </div>
+        </div>
+        <br><br><br>
+
+        <!-- Projects -->
+        <div class="row">
+          <div class="col-md-9" style="z-index: auto;">
+              <h2 id="projects" class="hreflink">Projects</h2>
+              <ul class="vert">
+                <li>
+                  <strong><a class="paragraph" href="https://www.agentpanel.cc/about">Agent Panel</a></strong><br>
+                  <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 22px; margin-top: 8px; padding-right: 14px;">
+                    <div style="flex: 1;">
+                      The world's first "Research Moltbook × AI Agent Quora" community.<br>
+                      Agent Panel focuses on LLMs, research life, and frontier questions across disciplines, summoning multiple agents for collaborative discussion through "one question, many answers".<br>
+                      Our goal: turn every curiosity into insight faster, and make every discussion more likely to lead to actionable next steps.<br>
+                    </div>
+                    <img src="https://www.agentpanel.cc/image/logo.png" alt="Agent Panel logo" width="132" style="flex: 0 0 auto; margin: 2px 0 0 0; border-radius: 16px; border: 1px solid rgba(0,0,0,0.08); background: #fff; padding: 10px;">
+                  </div>
+                  <a class="award" href="https://www.agentpanel.cc/about">Try it</a>
+                  <a class="github" href="https://github.com/PolynomialTime/AgentPanel">GitHub</a>
+                </li>
+              </ul>
           </div>
         </div>
         <br><br><br>
@@ -299,7 +323,8 @@
               <table>
                 <tr>
                   <td>
-                    ICLR 2025, 
+                    ICML 2026,
+                    ICLR 2025-2026, 
                     NeurIPS 2025,
                     AAAI 2026,
                     <a class="paragraph" href="static/certificates/IJCAI 2025 Reviewer.pdf">IJCAI 2025</a>, 
@@ -345,20 +370,17 @@
             <li>
               <strong>CraftUtopia: A LLM-based Multi-Agent System for Collaborative Construction in Minecraft.</strong><br>
               Wanli Fu, Hao Li, Siyue Ren, XingChenxi, Yang Chen, Chu chen, Zhen Wang, Shuyue Hu.<br>
-              <a class="nf">AAMAS 2026</a> |
-              <a class="aux" href="https://openreview.net/pdf?id=nPXksXvi5e">OpenReview</a>
+              <a class="nf">AAMAS 2026</a>               <a class="aux" href="https://openreview.net/pdf?id=nPXksXvi5e">OpenReview</a>
             </li>
             <li>
               <strong>The Landscape of Agentic Reinforcement Learning for LLMs: A Survey.</strong><br>
               Guibin Zhang, Hejia Geng, Xiaohang Yu, Zhenfei Yin, Zaibin Zhang, Zelin Tan, Heng Zhou, Zhongzhi Li, Xiangyuan Xue, Yijiang Li, Yifan Zhou, Yang Chen, Chen Zhang, Yutao Fan, Zihu Wang, Songtao Huang, Yue Liao, Hongru Wang, Mengyue Yang, Heng Ji, Michael Littman, Jun Wang, Shuicheng Yan, Philip Torr, Lei Bai.<br>
-              <a class="nf">Transactions on Machine Learning Research</a> 2026 |
-              <a class="free" href="https://arxiv.org/abs/2509.02547">arXiv</a>
+              <a class="nf">Transactions on Machine Learning Research 2026</a>               <a class="free" href="https://arxiv.org/abs/2509.02547">arXiv</a>
             </li>
             <li>
               <strong>Do We Truly Need So Many Samples? Multi-LLM Repeated Sampling Efficiency Scales Test-Time Compute.</strong><br>
               Jianhao Chen, Zishuo Xun, Bocheng Zhou, Qiaosheng Zhang, Yang Chen, Wei Hu, Yuzhong Qu, Wanli Ouyang, Shuyue Hu.<br>
-              <a class="nf">AAAI 2026</a> |
-              <a class="free" href="http://arxiv.org/abs/2504.00762">arXiv</a>
+              <a class="nf">AAAI 2026</a>               <a class="free" href="http://arxiv.org/abs/2504.00762">arXiv</a>
             </li>
           </ul>
           <h4>Reinforcement Learning, Inverse Reinforcement Learning & Imitation Learning</h4>
@@ -366,53 +388,35 @@
             <li>
               <strong>Trust Region Reward Optimization and Proximal Inverse Reward Optimization Algorithm.</strong><br>
               Yang Chen, Menglin Zou, Jiaqi Zhang, Yitan Zhang, Junyi Yang, Gaël Gendron, Libo Zhang, Jiamou Liu, Michael Witbrock<br>
-              <a class="nf" href="https://nips.cc/virtual/2025/loc/mexico-city/poster/119985">NeurIPS 2025</a> |
-              <a class="aux" href="https://nips.cc/virtual/2025/loc/mexico-city/poster/119985">Video</a> |
-              <a class="aux" href="https://nips.cc/media/neurips-2025/Slides/119985_gPrVip5.pdf">Slides</a> |
-              <a class="aux" href="https://nips.cc/media/PosterPDFs/NeurIPS%202025/119985.png?t=1759049296.2698276">Poster</a> |
-              <a class="aux" href="https://openreview.net/forum?id=40M1uJl2GX">OpenReview</a> |
-              <a class="free" href="https://arxiv.org/abs/2509.23135">arXiv</a> |
-              <a class="aux" href="https://github.com/PolynomialTime/PIRO">Github</a>
+              <a class="nf" href="https://nips.cc/virtual/2025/loc/mexico-city/poster/119985">NeurIPS 2025</a>               <a class="aux" href="https://nips.cc/virtual/2025/loc/mexico-city/poster/119985">Video</a>               <a class="aux" href="https://nips.cc/media/neurips-2025/Slides/119985_gPrVip5.pdf">Slides</a>               <a class="aux" href="https://nips.cc/media/PosterPDFs/NeurIPS%202025/119985.png?t=1759049296.2698276">Poster</a>               <a class="aux" href="https://openreview.net/forum?id=40M1uJl2GX">OpenReview</a>               <a class="free" href="https://arxiv.org/abs/2509.23135">arXiv</a>               <a class="github" href="https://github.com/PolynomialTime/PIRO">Github</a>
             </li>
             <li>
               <strong>Situational-Constrained Sequential Resources Allocation via Reinforcement Learning.</strong><br>
               Libo Zhang, Yang Chen, Toru Takisaka, Kaiqi Zhao, Weidong Li, Jiamou Liu<br>
-              <a class="nf" href="">IJCAI 2025</a> |
-              <a class="free" href="https://www.arxiv.org/abs/2506.14125">arXiv</a> |
-              <a class="aux" href="">Code</a>
+              <a class="nf" href="">IJCAI 2025</a>               <a class="free" href="https://www.arxiv.org/abs/2506.14125">arXiv</a>               <a class="aux" href="">Code</a>
             </li>
             <li>
               <strong>Multi-Agent, Human-Agent and Beyond: A Survey on Cooperation in Social Dilemmas.</strong><br>
               Hao Guo, Chunjiang Mu, Yang Chen, Chen Shen, Shuyue Hu, Zhen Wang.<br>
-              <a class="nf" href="https://authors.elsevier.com/c/1jnqd3INukSK0q">Neurocomputing 2024</a> |
-              <a class="free" href="https://arxiv.org/abs/2402.17270">arXiv</a>
+              <a class="nf" href="https://authors.elsevier.com/c/1jnqd3INukSK0q">Neurocomputing 2024</a>               <a class="free" href="https://arxiv.org/abs/2402.17270">arXiv</a>
             </li>
             <li>
               <strong>Meta-Inverse Reinforcement Learning for Mean Field Games with Probabilistic Context Variables.</strong><br>
               Yang Chen, Xiao Lin, Bo Yan, Libo Zhang, Jiamou Liu, Neset Özkan Tan, Michael Witbrock.<br>
               Thirty-Eighth AAAI Conference on Artificial Intelligence.<br>
-              <a class="nf" href="https://ojs.aaai.org/index.php/AAAI/article/view/29021">AAAI 2024</a> |
-              <a class="aux" href="https://ojs.aaai.org/index.php/AAAI/article/view/29021/29938">Video/Poster</a> |
-              <a class="free" href="https://arxiv.org/abs/2509.03845">arXiv</a> |
-              <a class="aux" href="">Code</a>
+              <a class="nf" href="https://ojs.aaai.org/index.php/AAAI/article/view/29021">AAAI 2024</a>               <a class="aux" href="https://ojs.aaai.org/index.php/AAAI/article/view/29021/29938">Video/Poster</a>               <a class="free" href="https://arxiv.org/abs/2509.03845">arXiv</a>               <a class="aux" href="">Code</a>
             </li>
             <li>
               <strong>Density-based Correlated Equilibrium for Markov Games.</strong><br>
               Libo Zhang (equal contribution), Yang Chen (contact, equal contribution), Toru Takisaka, Bakh Khoussainov, Michael Witbrock, Jiamou Liu.<br>
               The 22nd International Conference on Autonomous Agents and Multi-agent Systems.<br>
-              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p652.pdf">AAMAS 2023</a> |
-              <a class="free" href="https://arxiv.org/abs/2302.08001">arXiv</a> |
-              <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40Cehjc-P6pKaHMHu431?e=uMYYZ4">Poster</a> |
-              <a class="aux" href="https://github.com/PolynomialTime/DBCPI">Code</a>
+              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p652.pdf">AAMAS 2023</a>               <a class="free" href="https://arxiv.org/abs/2302.08001">arXiv</a>               <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40Cehjc-P6pKaHMHu431?e=uMYYZ4">Poster</a>               <a class="github" href="https://github.com/PolynomialTime/DBCPI">Github</a>
             </li>
             <li>
               <strong>Adversarial Inverse Reinforcement Learning for Mean Field Games.</strong><br>
               Yang Chen, Libo Zhang, Jiamou Liu, Michael Witbrock.<br>
               The 22nd International Conference on Autonomous Agents and Multi-agent Systems.<br>
-              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1088.pdf">AAMAS 2023</a> |
-              <a class="free" href="https://arxiv.org/abs/2104.14654">arXiv</a> |
-              <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40CehjmKJKWnbzr8kTwc?e=T0eyFY">Poster</a> |
-              <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40Cehjx8ibGnb-4Ut6bc?e=4j6mhQ">Slides</a> 
+              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1088.pdf">AAMAS 2023</a>               <a class="free" href="https://arxiv.org/abs/2104.14654">arXiv</a>               <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40CehjmKJKWnbzr8kTwc?e=T0eyFY">Poster</a>               <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40Cehjx8ibGnb-4Ut6bc?e=4j6mhQ">Slides</a> 
             </li>
             <li>
               <strong>Interconnected Neural Linear Contextual Bandits with UCB Exploration.</strong><br>
@@ -424,8 +428,7 @@
               <strong>Individual-Level Inverse Reinforcement Learning for Mean Field Games.</strong><br>
               Yang Chen, Libo Zhang, Jiamou Liu, Shuyue Hu.<br>
               The 21st International Conference on Autonomous Agents and Multi-agent Systems.<br>
-              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p253.pdf">AAMAS 2022</a> | 
-              <a class="free" href="https://arxiv.org/abs/2202.06401">arXiv</a>
+              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p253.pdf">AAMAS 2022</a>               <a class="free" href="https://arxiv.org/abs/2202.06401">arXiv</a>
             </li>
             <li>
               <strong>Social Capital Games as A Framework for Social Structural Pattern Emergence.</strong><br>
@@ -437,9 +440,7 @@
               <strong>Social Structure Emergence: A Multi-agent Reinforcement Learning Framework for Relationship Building.</strong><br>
               Yang Chen, Jiamou Liu, He Zhao, Hongyi Su.<br>
               The 19th International Conference on Autonomous Agents and Multi-agent Systems.<br>
-              <a class="nf" href="http://www.ifaamas.org/Proceedings/aamas2020/pdfs/p1807.pdf">AAMAS 2020 (Extended Abstract)</a> |
-              <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40CehjvXzTfya6ht0Lod?e=hhZhTF">Slides</a> |
-              <a class="aux" href="https://underline.io/lecture/142-mechanism-design-for-defense-coordination-in-security-games">Talk</a>
+              <a class="nf" href="http://www.ifaamas.org/Proceedings/aamas2020/pdfs/p1807.pdf">AAMAS 2020 (Extended Abstract)</a>               <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40CehjvXzTfya6ht0Lod?e=hhZhTF">Slides</a>               <a class="aux" href="https://underline.io/lecture/142-mechanism-design-for-defense-coordination-in-security-games">Talk</a>
             </li>
           </ul>
 
@@ -449,22 +450,19 @@
               <strong>Behaviour Modelling of Social Animals via Causal Structure Discovery and Graph Neural Networks.</strong><br>
               Gaël Gendron (co-first), Yang Chen (co-first), Mitchell Rogers, Yiping Liu, Mihailo Azhar, Shahrokh Heidari, David Arturo Soriano Valdez, Kobe Knowles, Padriac O'Leary, Simon Eyre, Michael Witbrock, Gillian Dobbie, Jiamou Liu and Patrice Delmas.<br>
               The 23rd International Conference on Autonomous Agents and Multi-agent Systems.<br>
-              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p2276.pdf">AAMAS 2024 (Extended Abstract)</a> |
-              <a class="free" href="https://arxiv.org/abs/2312.14333">arXiv</a>
+              <a class="nf" href="https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p2276.pdf">AAMAS 2024 (Extended Abstract)</a>               <a class="free" href="https://arxiv.org/abs/2312.14333">arXiv</a>
             </li>
             <li>
               <strong>Meerkat Behaviour Recognition Dataset.</strong><br>
               Mitchell Rogers, Gael Gendron, David Soriano Valdez, Mihailo Azhar, Yang Chen, Shahrokh Heidari, Caleb Perelini, Padriac O'leary, Kobe Knowles, Izak Tait, Simon Eyre, Michael Wit- brock, Patrice Delmas.<br>
               3rd Workshop on CV4Animals: Computer Vision for Animal Behavior Tracking and Modeling (in conjunction with CVPR 2023).<br>
-              <a class="free" href="https://arxiv.org/abs/2306.11326">arXiv</a> |
-              <a class="aux" href="https://1drv.ms/f/s!AiYYEj7z40Ceh3v2UqEGOX1zMK6j">Dataset</a>
+              <a class="free" href="https://arxiv.org/abs/2306.11326">arXiv</a>               <a class="aux" href="https://1drv.ms/f/s!AiYYEj7z40Ceh3v2UqEGOX1zMK6j">Dataset</a>
             </li>
             <li>
               <strong>MSDC: Non-intrusive Load Monitoring with a Dual-CNN Model.</strong><br>
                 Jialing He, Jiamou Liu, Zijian Zhang, Yang Chen, Yiwei Liu, Bakh Khoussainov, Liehuang Zhu.<br>
                 Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI-23).<br>
-                <a class="nf" href="https://ojs.aaai.org/index.php/AAAI/article/download/25636/25408">AAAI 2023</a> |
-                <a class="free" href="https://arxiv.org/abs/2302.05565">arXiv</a>
+                <a class="nf" href="https://ojs.aaai.org/index.php/AAAI/article/download/25636/25408">AAAI 2023</a>                 <a class="free" href="https://arxiv.org/abs/2302.05565">arXiv</a>
             </li>
           </ul>
 
@@ -474,15 +472,13 @@
               <strong>Assessing and Enhancing the Robustness of Large Language Models with Task Structure Variations for Logical Reasoning.</strong><br>
               Qiming Bao, Gaël Gendron, Alex Peng, Wanjun Zhong, Neset Tan, Yang Chen, Michael Witbrock, Jiamou Liu.<br>
               The 31st International Conference on Neural Information Processing.<br>
-              <a class="nf" href="">ICONIP 2024</a> |
-              <a class="free" href="https://arxiv.org/abs/2310.09430">arXiv</a>
+              <a class="nf" href="">ICONIP 2024</a>               <a class="free" href="https://arxiv.org/abs/2310.09430">arXiv</a>
             </li>
             <li>
               <strong>Abstract Meaning Representation-Based Logic-Driven Data Augmentation for Logical Reasoning.</strong><br>
               Qiming Bao, Alex Yuxuan Peng, Zhenyun Deng, Wanjun Zhong, Gaël Gendron, Timothy Pistotti, Neset Tan, Nathan Young, Yang Chen, Yonghua Zhu, Paul Denny, Michael Witbrock, Jiamou Liu.<br>
               The 62nd Annual Meeting of the Association for Computational Linguistics.<br>
-              <a class="nf" href="">ACL 2024 Findings</a> |
-              <a class="free" href="https://arxiv.org/abs/2305.12599">arXiv</a>
+              <a class="nf" href="">ACL 2024 Findings</a>               <a class="free" href="https://arxiv.org/abs/2305.12599">arXiv</a>
             </li>
             <li>
               <strong>Neuromodulation Gated Transformer.</strong><br>
@@ -506,8 +502,7 @@
               <strong>Prompt-based Conservation  Learning for Multi-hop Question Answering.</strong><br>
               Zhenyun Deng, Yonghua Zhu, Yang Chen, Qianqian Qi, Michael Witbrock, Patricia Riddle.<br>
               The 29th International Conference on Computational Linguistics.<br>
-              <a class="nf" href="https://aclanthology.org/2022.coling-1.154.pdf">COLING 2022</a> |
-              <a class="free" href="https://arxiv.org/abs/2209.06923">arXiv</a>
+              <a class="nf" href="https://aclanthology.org/2022.coling-1.154.pdf">COLING 2022</a>               <a class="free" href="https://arxiv.org/abs/2209.06923">arXiv</a>
             </li>
             <li>
               <strong>Eye Gaze and Self-attention: How Humans and Transformers Attend Words in Sentences.</strong><br>
@@ -541,8 +536,7 @@
               <strong>Efficient Size-Prescribed k-Core Search</strong><br>
               Yiping Liu, Bo Yan, Bo Zhao, Hongyi Su, Yang Chen, Michael Witbrock.<br>
               The 2023 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining.<br>
-              <a class="nf" href="">ASONAM 2023</a> |
-              <a class="free" href="https://arxiv.org/abs/2403.09214">arXiv</a>
+              <a class="nf" href="">ASONAM 2023</a>               <a class="free" href="https://arxiv.org/abs/2403.09214">arXiv</a>
             </li>
             <li>
               <strong>Chain of Propagation Prompting for Node Classification.</strong><br>
@@ -560,8 +554,7 @@
               <strong>Dynamic Relationship Building: Exploitation Versus Exploration on a Social Network.</strong><br>
               Bo Yan, Yang Chen, Jiamou Liu.<br>
               The 18th International Conference on Web Information Systems Engineering.<br>
-              <a class="nf" href="https://link.springer.com/chapter/10.1007/978-3-319-68783-4_6">WISE 2017</a> |
-              <a class="aux" href="https://github.com/PolynomialTime/WISE2017">Code</a>
+              <a class="nf" href="https://link.springer.com/chapter/10.1007/978-3-319-68783-4_6">WISE 2017</a>               <a class="github" href="https://github.com/PolynomialTime/WISE2017">Github</a>
             </li>
             <li>
               <strong>Can Reinforcement Learning Enhance Social Capital?</strong><br>
@@ -573,17 +566,14 @@
               <strong>Distributed Community Detection over Blockchain Networks Based on Structural Entropy.</strong><br>
               Yang Chen, Jiamou Liu.<br>
               The 2019 ACM International Symposium on Blockchain and Secure Critical Infrastructure (BSCI). An AsiaCCS Workshop.<br>
-              <a class="award" href="http://www.cloud-conf.net/bsci/2019/">Best Paper Award</a> |
-              <a class="nf" href="https://dl.acm.org/citation.cfm?doid=3327960.3332381">BSCI 2019</a> |
-              <a class="nf" href="https://www.researchgate.net/publication/334358789_Distributed_Community_Detection_over_Blockchain_Networks_Based_on_Structural_Entropy#fullTextFileContent">PDF</a>
+              <a class="award" href="http://www.cloud-conf.net/bsci/2019/">Best Paper Award</a> 
+              <a class="nf" href="https://dl.acm.org/citation.cfm?doid=3327960.3332381">BSCI 2019</a>               <a class="nf" href="https://www.researchgate.net/publication/334358789_Distributed_Community_Detection_over_Blockchain_Networks_Based_on_Structural_Entropy#fullTextFileContent">PDF</a>
             </li>
             <li>
               <strong>Becoming Gatekeepers Together with Allies: Collaborative Brokerage over Social Networks.</strong><br>
               Yang Chen, Jiamou Liu. <br>
               2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining.<br>
-              <a class="nf" href="https://asonamdata.com/ASONAM2019_Proceedings/pdf/papers/011_0081_014.pdf">ASONAM 2019</a> |
-              <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40CehjhwW_SVZ9ed-h7h?e=ktJ7qB">Poster</a> |
-              <a class="aux" href="https://github.com/PolynomialTime/ASONAM2019">Code</a>
+              <a class="nf" href="https://asonamdata.com/ASONAM2019_Proceedings/pdf/papers/011_0081_014.pdf">ASONAM 2019</a>               <a class="aux" href="https://1drv.ms/b/s!AiYYEj7z40CehjhwW_SVZ9ed-h7h?e=ktJ7qB">Poster</a>               <a class="github" href="https://github.com/PolynomialTime/ASONAM2019">Github</a>
             </li>
           </ul>
           </div>
