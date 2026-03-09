@@ -262,7 +262,10 @@ ul.vert > li {
 
 .project-agentpanel-logo {
   flex: 0 0 auto;
-  width: 132px;
+  display: block;
+  width: 132px !important;
+  max-width: 132px !important;
+  height: auto !important;
   margin: 2px 0 0 0;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -532,7 +535,8 @@ a.github:active {
   }
 
   .project-agentpanel-logo {
-    width: 112px;
+    width: 112px !important;
+    max-width: 112px !important;
     margin-top: 2px;
   }
 
