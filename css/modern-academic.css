@@ -247,6 +247,29 @@ ul.vert > li {
   background: transparent;
 }
 
+.project-agentpanel-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 8px;
+  padding-right: 14px;
+}
+
+.project-agentpanel-copy {
+  flex: 1;
+}
+
+.project-agentpanel-logo {
+  flex: 0 0 auto;
+  width: 132px;
+  margin: 2px 0 0 0;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 10px;
+}
+
 .free,
 .nf,
 .aux,
@@ -500,6 +523,49 @@ a.github:active {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
+  }
+
+  .project-agentpanel-layout {
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 0;
+  }
+
+  .project-agentpanel-logo {
+    width: 112px;
+    margin-top: 2px;
+  }
+
+  a.free,
+  a.nf,
+  a.aux,
+  a.award,
+  a.github,
+  a.free:link,
+  a.nf:link,
+  a.aux:link,
+  a.award:link,
+  a.github:link,
+  a.free:visited,
+  a.nf:visited,
+  a.aux:visited,
+  a.award:visited,
+  a.github:visited,
+  a.free:hover,
+  a.nf:hover,
+  a.aux:hover,
+  a.award:hover,
+  a.github:hover,
+  a.free:active,
+  a.nf:active,
+  a.aux:active,
+  a.award:active,
+  a.github:active {
+    height: 32px !important;
+    padding: 0 10px !important;
+    min-width: 0 !important;
+    font-size: 12px;
+    margin: 3px 2px;
   }
 }
 
