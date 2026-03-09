@@ -435,6 +435,22 @@ a.github:active {
   background: #0d1117 !important;
 }
 
+.btn-apple-gray,
+a.btn-apple-gray,
+a.btn-apple-gray:link,
+a.btn-apple-gray:visited {
+  color: #1d1d1f !important;
+  border-color: #d2d2d7 !important;
+  background: #f5f5f7 !important;
+}
+
+a.btn-apple-gray:hover,
+a.btn-apple-gray:active {
+  color: #000000 !important;
+  border-color: #bdbdc2 !important;
+  background: #e8e8ed !important;
+}
+
 @media (max-width: 991px) {
   h2 {
     font-size: 34px;
