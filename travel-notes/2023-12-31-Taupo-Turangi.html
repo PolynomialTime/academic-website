@@ -6,51 +6,56 @@
     <title>Travel Notes 2023-12-31-Taupo-Turangi</title>
     <meta name="description" content="Travel notes gallery page.">
     <meta name="keywords" content="travel, photography, notes">
-    
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles-merged.css">
-    <link rel="stylesheet" href="../css/style.min.css">
-    <link rel="stylesheet" href="../css/custom.css">
-
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/editorial-home.css">
+    <link rel="stylesheet" href="../css/travel-note-editorial.css">
     <meta name="robots" content="noindex, nofollow">
   </head>
-  <body>
-
-  <div class="probootstrap-loader"></div>
-
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" id="collapse" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="../index.html" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;">Home</a></li>
-          <li><a href="../index.html#experience" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Experience</a></li>
-          <li><a href="../index.html#tutorials" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Talks</a></li>
-          <li><a href="../index.html#teaching" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Teaching</a></li>
-          <li><a href="../index.html#grants" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Grants</a></li>
-          <li><a href="../index.html#awards" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Awards</a></li>
-          <li><a href="../index.html#services" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Academic Services</a></li>
-          <li><a href="../index.html#publications" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Publications</a></li>
-          <li><a href="../gallery-embed.html" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">Gallery</a></li>
-          <li><a href="../index-zh.html" style="text-align: center; font-family: Arial, sans-serif; font-size: 14px;" onclick="$('.collapse').collapse('hide');">EN/中文</a></li>
-        </ul>
-      </div>
+  <body class="travel-note-page">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html#top">YC</a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#talks">Talks</a>
+        <a href="../index.html#talks">Teaching</a>
+        <a href="../index.html#grants">Grants</a>
+        <a href="../index.html#awards">Awards</a>
+        <a href="../index.html#services">Academic Service</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../gallery-embed.html">Gallery</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span>Menu</span>
+      </button>
     </div>
-  </nav>
+  </header>
 
-  <div class="probootstrap-section">
+  <div class="page-shell">
+    <div class="menu-overlay" id="site-menu" aria-hidden="true">
+      <button class="menu-close" type="button" aria-label="Close menu">Close</button>
+      <nav class="overlay-nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#talks">Talks</a>
+        <a href="../index.html#talks">Teaching</a>
+        <a href="../index.html#grants">Grants</a>
+        <a href="../index.html#awards">Awards</a>
+        <a href="../index.html#services">Academic Service</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../gallery-embed.html">Gallery</a>
+        <a href="../index-zh.html">中文</a>
+      </nav>
+    </div>
+
+    <main id="top">
+
+  <section class="probootstrap-section">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 mb40 text-center">
@@ -116,24 +121,45 @@
       <br>
 
     </div>
-  </div>
+  </section>
 
-  <footer class="probootstrap-footer" role="contentinfo">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="probootstrap-copyright">&copy; 2025 <a href="https://www.yangchen.info/">Yang Chen</a> All Rights Reserved.</p>
+        <section class="section-block footer-block">
+        <div class="travel-note-footer">
+          <p>&copy; 2025 Yang Chen. Travel notes, photographs, and personal field records.</p>
+          <div class="chip-row">
+            <a href="../gallery-embed.html">Back to Gallery</a>
+            <a href="../index.html">Back Home</a>
+          </div>
         </div>
-      </div>
-    </div>
-  </footer>
-
-  <div class="gototop js-top">
-    <a href="#" class="js-gotop">Top</a>
+      </section>
+    </main>
   </div>
 
-  <script src="../js/scripts.min.js"></script>
-  <script src="../js/main.min.js"></script>
-  <script src="../js/custom.js"></script>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const overlay = document.querySelector('.menu-overlay');
+    const closeButton = document.querySelector('.menu-close');
+    const navLinks = document.querySelectorAll('.overlay-nav a');
+
+    const setMenuState = (open) => {
+      document.body.classList.toggle('menu-open', open);
+      toggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+      overlay?.setAttribute('aria-hidden', open ? 'false' : 'true');
+    };
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      setMenuState(!isOpen);
+    });
+
+    closeButton?.addEventListener('click', () => setMenuState(false));
+    overlay?.addEventListener('click', (event) => {
+      if (event.target === overlay) setMenuState(false);
+    });
+    navLinks.forEach((link) => link.addEventListener('click', () => setMenuState(false)));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuState(false);
+    });
+  </script>
 </body>
 </html>

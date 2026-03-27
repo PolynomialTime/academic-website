@@ -1,0 +1,286 @@
+.gallery-page .page-shell {
+  padding-bottom: 72px;
+}
+
+.gallery-hero {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 72vh;
+  margin-top: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 128px 0 52px;
+  overflow: hidden;
+  color: #f7f2ea;
+}
+
+.gallery-hero::before,
+.gallery-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.gallery-hero::before {
+  background:
+    linear-gradient(90deg, rgba(9, 9, 9, 0.82) 0%, rgba(9, 9, 9, 0.45) 42%, rgba(9, 9, 9, 0.22) 100%),
+    linear-gradient(180deg, rgba(9, 9, 9, 0.08), rgba(9, 9, 9, 0.5)),
+    url("../gallery/2025-05-04 South Island/5.jpg") center / cover;
+  transform: scale(1.02);
+}
+
+.gallery-hero::after {
+  background: linear-gradient(180deg, rgba(242, 238, 231, 0) 78%, var(--bg) 100%);
+}
+
+.gallery-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) 280px;
+  gap: 36px;
+  align-items: end;
+}
+
+.gallery-hero-copy {
+  max-width: 720px;
+}
+
+.gallery-hero-copy h1 {
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(3.8rem, 10vw, 7.2rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.gallery-hero-copy p {
+  max-width: 620px;
+}
+
+.gallery-lead {
+  margin: 28px 0 0;
+  font-size: 1.14rem;
+  color: rgba(247, 242, 234, 0.92);
+}
+
+.gallery-subcopy {
+  margin: 16px 0 0;
+  color: rgba(247, 242, 234, 0.72);
+}
+
+.gallery-hero .chip-row {
+  margin-top: 28px;
+}
+
+.gallery-hero .chip-row a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid rgba(247, 242, 234, 0.28);
+  background: rgba(255, 252, 246, 0.14);
+  color: #f7f2ea;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+}
+
+.gallery-hero .chip-row a:hover {
+  background: rgba(255, 252, 246, 0.96);
+  color: var(--ink);
+}
+
+.gallery-rail {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+}
+
+.gallery-rail > div {
+  padding-top: 18px;
+  border-top: 1px solid rgba(247, 242, 234, 0.22);
+}
+
+.gallery-rail strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.gallery-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.gallery-entry {
+  grid-column: span 4;
+}
+
+.gallery-entry.wide {
+  grid-column: span 8;
+}
+
+.gallery-entry.tall {
+  grid-column: span 4;
+}
+
+.gallery-card {
+  position: relative;
+  display: flex;
+  align-items: end;
+  min-height: 280px;
+  padding: 22px;
+  background-color: #1b1a17;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gallery-entry.wide .gallery-card {
+  min-height: 360px;
+}
+
+.gallery-entry.tall .gallery-card {
+  min-height: 420px;
+}
+
+.gallery-entry.feature .gallery-card {
+  min-height: 440px;
+}
+
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.06)),
+    linear-gradient(180deg, rgba(12, 12, 12, 0.02) 0%, rgba(12, 12, 12, 0.72) 100%);
+  opacity: 1;
+  transition: opacity 0.22s ease;
+}
+
+.gallery-card:hover::after {
+  opacity: 0.92;
+}
+
+.gallery-card:hover .gallery-card-copy {
+  transform: translateY(-6px);
+}
+
+.gallery-card-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  color: #fff7ed;
+  transition: transform 0.22s ease;
+}
+
+.gallery-card-copy p {
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255, 247, 237, 0.72);
+}
+
+.gallery-card-copy h3 {
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(1.45rem, 3vw, 2.6rem);
+  line-height: 1.02;
+}
+
+.gallery-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gallery-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.gallery-footer .chip-row a {
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .gallery-hero-inner,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-entry,
+  .gallery-entry.wide,
+  .gallery-entry.tall {
+    grid-column: auto;
+  }
+
+  .gallery-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-entry.feature .gallery-card,
+  .gallery-entry.tall .gallery-card,
+  .gallery-entry.wide .gallery-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 860px) {
+  .gallery-hero {
+    min-height: 620px;
+    padding: 108px 0 32px;
+  }
+
+  .gallery-hero-inner {
+    width: min(calc(100% - 24px), var(--max));
+    gap: 24px;
+  }
+
+  .gallery-hero-copy h1 {
+    font-size: clamp(3rem, 17vw, 4.8rem);
+  }
+
+  .gallery-lead {
+    font-size: 1rem;
+  }
+
+  .gallery-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    gap: 12px;
+  }
+
+  .gallery-card,
+  .gallery-entry.feature .gallery-card,
+  .gallery-entry.wide .gallery-card,
+  .gallery-entry.tall .gallery-card {
+    min-height: 260px;
+    padding: 18px;
+  }
+
+  .gallery-footer {
+    align-items: start;
+    flex-direction: column;
+  }
+}

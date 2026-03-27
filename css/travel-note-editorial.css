@@ -1,0 +1,189 @@
+.travel-note-page {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.travel-note-page .page-shell {
+  width: min(calc(100% - 40px), var(--max));
+}
+
+.travel-note-page .probootstrap-section {
+  padding: 0 0 48px;
+}
+
+.travel-note-page .container {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.travel-note-page .container > br {
+  display: none;
+}
+
+.travel-note-page .row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0 0 36px;
+}
+
+.travel-note-page .row:first-child {
+  grid-template-columns: 1fr;
+  margin-bottom: 52px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.travel-note-page .text-center {
+  text-align: center;
+}
+
+.travel-note-page .col-md-8.col-md-offset-2,
+.travel-note-page .col-md-6.col-md-offset-3 {
+  width: min(100%, 820px);
+  margin: 0 auto;
+}
+
+.travel-note-page .row:first-child h2 {
+  margin: 0 0 12px;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.travel-note-page .row:first-child h2 + h2 {
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.travel-note-page .row:first-child p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.travel-note-page .col-md-6 {
+  min-width: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.travel-note-page p {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.travel-note-page .col-md-6 p:first-child {
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.travel-note-page .col-md-6 p:first-child strong {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.travel-note-page a {
+  color: var(--accent);
+}
+
+.travel-note-page .wordmark,
+.travel-note-page .desktop-nav a,
+.travel-note-page .menu-toggle {
+  color: var(--dark-soft);
+}
+
+.travel-note-page .desktop-nav a:hover,
+.travel-note-page .desktop-nav a:focus-visible,
+.travel-note-page .wordmark:hover,
+.travel-note-page .wordmark:focus-visible {
+  color: var(--accent);
+}
+
+.travel-note-page a.image-popup {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.travel-note-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.travel-note-page .section-block.footer-block {
+  padding-top: 20px;
+}
+
+.travel-note-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.travel-note-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.travel-note-footer .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.travel-note-footer .chip-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+}
+
+.travel-note-footer .chip-row a:hover,
+.travel-note-footer .chip-row a:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 1180px) {
+  .travel-note-page .row {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-note-page .row:first-child {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .travel-note-page .page-shell {
+    width: min(calc(100% - 24px), var(--max));
+  }
+
+  .travel-note-page .row:first-child h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+
+  .travel-note-page .row:first-child h2 + h2 {
+    font-size: clamp(1.4rem, 8vw, 2.2rem);
+  }
+
+  .travel-note-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
