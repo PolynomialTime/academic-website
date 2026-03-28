@@ -139,8 +139,7 @@
 
 .gallery-card {
   position: relative;
-  display: flex;
-  align-items: end;
+  display: block;
   min-height: 280px;
   padding: 22px;
   background-color: #1b1a17;
@@ -189,7 +188,10 @@
 }
 
 .gallery-card-copy {
-  position: relative;
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
   z-index: 1;
   max-width: 520px;
   color: #fff7ed;
@@ -283,6 +285,12 @@
   .gallery-entry.tall .gallery-card {
     min-height: 260px;
     padding: 18px;
+  }
+
+  .gallery-card-copy {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
   }
 
   .gallery-footer {
