@@ -207,6 +207,8 @@ img {
 .intro-band,
 .section-block {
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 720px;
 }
 
 .hero {

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/d9b0eb6a3d.js" crossorigin="anonymous"></script>
+  <link rel="preload" as="image" href="./gallery/20220926-CambridgeWaikato/_DSC1712-2.jpg" fetchpriority="high">
   <link rel="stylesheet" href="./css/editorial-home.css">
   <link rel="icon" href="favicon.ico">
 </head>
@@ -56,22 +56,22 @@
       <section class="hero">
         <div class="hero-slider" aria-hidden="true">
           <div class="hero-slide is-active" style="background-image: url('./gallery/20220926-CambridgeWaikato/_DSC1712-2.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20230529-London/R0000708.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20220509-PhDGraduation/DSC01166-Edit copy.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/2024-05-06-AAMAS24/5.jpeg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/2024-11-20 Fuji/4.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20211221-Queenstown/8.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20211225-LakeWakatipu/DSC00463.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20211225-RouteBurnTrack/11.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20220509-PhDGraduation/DSC01130.jpeg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20221020-SouthAlpine/12.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20230409-Tongariro-Taupo/Tongariro-2.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20231107-Istanbul/10.jpeg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20211224-SH94/3.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20220501-Taranaki/DSC00724.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20220619-JinGangBei-Chongqing/_DSC1359.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20221020-SouthAlpine/5.jpg');"></div>
-          <div class="hero-slide" style="background-image: url('./gallery/20221020-SouthAlpine/13.jpg');"></div>
+          <div class="hero-slide" data-bg="./gallery/20230529-London/R0000708.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20220509-PhDGraduation/DSC01166-Edit copy.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/2024-05-06-AAMAS24/5.jpeg"></div>
+          <div class="hero-slide" data-bg="./gallery/2024-11-20 Fuji/4.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20211221-Queenstown/8.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20211225-LakeWakatipu/DSC00463.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20211225-RouteBurnTrack/11.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20220509-PhDGraduation/DSC01130.jpeg"></div>
+          <div class="hero-slide" data-bg="./gallery/20221020-SouthAlpine/12.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20230409-Tongariro-Taupo/Tongariro-2.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20231107-Istanbul/10.jpeg"></div>
+          <div class="hero-slide" data-bg="./gallery/20211224-SH94/3.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20220501-Taranaki/DSC00724.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20220619-JinGangBei-Chongqing/_DSC1359.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20221020-SouthAlpine/5.jpg"></div>
+          <div class="hero-slide" data-bg="./gallery/20221020-SouthAlpine/13.jpg"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-copy">
@@ -585,11 +585,21 @@
       }
     });
 
+    function hydrateSlide(slide) {
+      if (!slide || slide.style.backgroundImage || !slide.dataset.bg) return;
+      slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
+    }
+
+    hydrateSlide(slides[0]);
+
     if (slides.length > 1) {
       let activeSlide = 0;
+      hydrateSlide(slides[1]);
       setInterval(() => {
         slides[activeSlide].classList.remove('is-active');
         activeSlide = (activeSlide + 1) % slides.length;
+        hydrateSlide(slides[activeSlide]);
+        hydrateSlide(slides[(activeSlide + 1) % slides.length]);
         slides[activeSlide].classList.add('is-active');
       }, 4200);
     }
