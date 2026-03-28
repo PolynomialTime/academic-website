@@ -3,6 +3,10 @@
   color: var(--ink);
 }
 
+.travel-note-page::before {
+  display: none;
+}
+
 .travel-note-page .page-shell {
   width: min(calc(100% - 40px), var(--max));
 }
