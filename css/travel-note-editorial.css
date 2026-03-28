@@ -110,6 +110,16 @@
   color: var(--accent);
 }
 
+.travel-note-page .overlay-nav a,
+.travel-note-page .menu-close {
+  color: #f7f2ea;
+}
+
+.travel-note-page .overlay-nav a:hover,
+.travel-note-page .overlay-nav a:focus-visible {
+  color: #cfa171;
+}
+
 .travel-note-page a.image-popup {
   display: block;
   margin-bottom: 14px;

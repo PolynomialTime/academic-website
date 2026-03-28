@@ -152,6 +152,7 @@
 
     const setMenuState = (open) => {
       document.body.classList.toggle('menu-open', open);
+      overlay?.classList.toggle('is-open', open);
       toggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
       overlay?.setAttribute('aria-hidden', open ? 'false' : 'true');
     };
