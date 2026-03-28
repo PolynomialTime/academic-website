@@ -144,11 +144,17 @@
   min-height: 280px;
   padding: 22px;
   background-color: #1b1a17;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
   isolation: isolate;
+}
+
+.gallery-card-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .gallery-entry.wide .gallery-card {
