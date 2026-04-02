@@ -207,8 +207,18 @@ img {
 .intro-band,
 .section-block {
   position: relative;
-  content-visibility: auto;
-  contain-intrinsic-size: 720px;
+}
+
+#about,
+#projects,
+#talks,
+#teaching,
+#grants,
+#awards,
+#services,
+#publications,
+#experience {
+  scroll-margin-top: 92px;
 }
 
 .hero {
