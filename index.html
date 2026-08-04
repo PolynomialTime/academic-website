@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="./gallery/20220926-CambridgeWaikato/_DSC1712-2.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="./static/img/hero-collage.jpg" media="(min-width: 861px)" fetchpriority="high">
+  <link rel="preload" as="image" href="./static/img/hero-collage-mobile.jpg" media="(max-width: 860px)" fetchpriority="high">
   <link rel="stylesheet" href="./css/editorial-home.css">
   <link rel="icon" href="favicon.ico">
 </head>
@@ -54,25 +55,10 @@
 
     <main id="top">
       <section class="hero">
-        <div class="hero-slider" aria-hidden="true">
-          <div class="hero-slide is-active" style="background-image: url('./gallery/20220926-CambridgeWaikato/_DSC1712-2.jpg');"></div>
-          <div class="hero-slide" data-bg="./gallery/20230529-London/R0000708.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20220509-PhDGraduation/DSC01166-Edit copy.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/2024-05-06-AAMAS24/5.jpeg"></div>
-          <div class="hero-slide" data-bg="./gallery/2024-11-20 Fuji/4.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20211221-Queenstown/8.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20211225-LakeWakatipu/DSC00463.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20211225-RouteBurnTrack/11.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20220509-PhDGraduation/DSC01130.jpeg"></div>
-          <div class="hero-slide" data-bg="./gallery/20221020-SouthAlpine/12.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20230409-Tongariro-Taupo/Tongariro-2.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20231107-Istanbul/10.jpeg"></div>
-          <div class="hero-slide" data-bg="./gallery/20211224-SH94/3.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20220501-Taranaki/DSC00724.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20220619-JinGangBei-Chongqing/_DSC1359.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20221020-SouthAlpine/5.jpg"></div>
-          <div class="hero-slide" data-bg="./gallery/20221020-SouthAlpine/13.jpg"></div>
-        </div>
+        <picture class="hero-collage" aria-hidden="true">
+          <source media="(max-width: 860px)" srcset="./static/img/hero-collage-mobile.jpg">
+          <img src="./static/img/hero-collage.jpg" alt="" width="2400" height="1350" fetchpriority="high">
+        </picture>
         <div class="hero-overlay"></div>
         <div class="hero-copy">
           <p class="eyebrow">Academic Portfolio</p>
@@ -117,7 +103,7 @@
               I obtained my PhD in computer science from <a href="https://www.auckland.ac.nz/">the University of Auckland</a>, after completing First Class Honours there in 2018. Before moving to New Zealand, I received my B.S. in computer science from <a href="https://english.bit.edu.cn">Beijing Institute of Technology</a>.
             </p>
             <p>
-              My research spans reinforcement learning, multi-agent systems and game theory. A central thread is learning in large populations, where mean-field perspectives help scale multi-agent reasoning. More recently, I have focused on LLMs, behaviour modelling, ethical AI, and responsible AI.
+              My research spans reinforcement learning, multi-agent systems and game theory. A central thread is reward learning from data, where I focus on both algorithmic design and applications. More recently, I have focused on LLMs, behaviour modelling, ethical AI, and responsible AI.
             </p>
             <p>
               Outside research and teaching, I spend time hiking and making photographs. That visual sensibility matters to how I present research too: clarity, sequence, atmosphere, and strong composition.
@@ -555,7 +541,6 @@
     const overlay = document.querySelector('.menu-overlay');
     const closeButton = document.querySelector('.menu-close');
     const navLinks = document.querySelectorAll('.overlay-nav a');
-    const slides = document.querySelectorAll('.hero-slide');
 
     function openMenu() {
       overlay.classList.add('is-open');
@@ -600,24 +585,6 @@
       }
     });
 
-    function hydrateSlide(slide) {
-      if (!slide || slide.style.backgroundImage || !slide.dataset.bg) return;
-      slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
-    }
-
-    hydrateSlide(slides[0]);
-
-    if (slides.length > 1) {
-      let activeSlide = 0;
-      hydrateSlide(slides[1]);
-      setInterval(() => {
-        slides[activeSlide].classList.remove('is-active');
-        activeSlide = (activeSlide + 1) % slides.length;
-        hydrateSlide(slides[activeSlide]);
-        hydrateSlide(slides[(activeSlide + 1) % slides.length]);
-        slides[activeSlide].classList.add('is-active');
-      }, 4200);
-    }
   </script>
 </body>
 </html>
