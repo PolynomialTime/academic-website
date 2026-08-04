@@ -227,12 +227,12 @@ img {
   gap: 36px;
   width: 100vw;
   max-width: 100vw;
-  min-height: min(78vh, 860px);
+  min-height: min(68vh, 760px);
   align-items: start;
   margin-top: 0;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding: 42px 38px 40px;
+  padding: 34px 34px 32px;
   overflow: hidden;
   color: #f7f2ea;
 }
@@ -378,8 +378,8 @@ img {
 
 .intro-band,
 .section-block {
-  margin-top: 34px;
-  padding: 38px;
+  margin-top: 24px;
+  padding: 30px;
   border-top: 1px solid var(--line-strong);
   background: transparent;
 }
@@ -387,7 +387,7 @@ img {
 .section-head {
   display: grid;
   gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .section-head h2 {
@@ -464,7 +464,7 @@ img {
 }
 
 .timeline-group {
-  padding: 24px;
+  padding: 20px;
   border-top: 1px solid var(--line-strong);
   background: transparent;
 }
@@ -496,7 +496,7 @@ img {
 }
 
 .list-panel {
-  padding: 26px;
+  padding: 22px;
   border-top: 1px solid var(--line-strong);
   background: transparent;
 }
@@ -545,7 +545,73 @@ img {
 }
 
 .pub-group + .pub-group {
-  margin-top: 32px;
+  margin-top: 26px;
+}
+
+.compact-triad {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.compact-triad .section-block {
+  margin-top: 0;
+  padding: 26px 22px;
+}
+
+.compact-triad .section-head {
+  margin-bottom: 18px;
+}
+
+.compact-triad .section-head h2 {
+  font-size: clamp(2.3rem, 3.6vw, 3.5rem);
+}
+
+.compact-triad .list-panel {
+  padding: 18px 0 0;
+}
+
+#about,
+#experience,
+#projects,
+#talks {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.46fr) minmax(0, 1.54fr);
+  column-gap: 32px;
+  align-items: start;
+}
+
+#about .section-head,
+#experience .section-head,
+#projects .section-head,
+#talks .section-head {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+#about .section-head h2,
+#experience .section-head h2,
+#projects .section-head h2,
+#talks .section-head h2 {
+  font-size: clamp(2.1rem, 3.4vw, 3.1rem);
+  line-height: 0.98;
+}
+
+#about .intro-grid,
+#experience .timeline,
+#projects > p,
+#projects > .chip-row,
+#talks .split-layout {
+  grid-column: 2;
+}
+
+#projects > p {
+  margin-top: 0;
+}
+
+#projects > .chip-row {
+  margin-top: 16px;
 }
 
 .pub-list {
@@ -634,7 +700,7 @@ img {
 
   .hero {
     grid-template-columns: 1fr;
-    min-height: 620px;
+    min-height: 580px;
     margin-top: 0;
     padding: 28px 20px 24px;
   }
@@ -651,6 +717,30 @@ img {
   .intro-band,
   .section-block {
     padding: 26px 20px;
+  }
+
+  #about,
+  #experience,
+  #projects,
+  #talks {
+    display: block;
+  }
+
+  #about .section-head,
+  #experience .section-head,
+  #projects .section-head,
+  #talks .section-head {
+    margin-bottom: 20px;
+  }
+
+  .compact-triad {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 24px;
+  }
+
+  .compact-triad .section-block + .section-block {
+    margin-top: 16px;
   }
 
   .intro-grid {

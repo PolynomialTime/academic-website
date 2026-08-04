@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./static/img/gallery-hero-collage.jpg" media="(min-width: 861px)" fetchpriority="high">
+  <link rel="preload" as="image" href="./static/img/gallery-hero-collage-mobile.jpg" media="(max-width: 860px)" fetchpriority="high">
   <link rel="stylesheet" href="./css/editorial-home.css">
   <link rel="stylesheet" href="./css/gallery-editorial.css">
   <link rel="icon" href="favicon.ico">
@@ -55,6 +57,10 @@
 
     <main id="top">
       <section class="gallery-hero">
+        <picture class="gallery-hero-collage" aria-hidden="true">
+          <source media="(max-width: 860px)" srcset="./static/img/gallery-hero-collage-mobile.jpg">
+          <img src="./static/img/gallery-hero-collage.jpg" alt="" width="2400" height="1350" fetchpriority="high">
+        </picture>
         <div class="gallery-hero-inner">
           <div class="gallery-hero-copy">
             <p class="eyebrow">Gallery</p>
