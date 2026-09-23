@@ -133,7 +133,6 @@ img {
 
 .desktop-nav a[href="gallery-embed.html"],
 .overlay-nav a[href="gallery-embed.html"] {
-  color: var(--accent);
   font-family: "Bodoni Moda", serif;
   font-style: italic;
   font-weight: 700;
@@ -144,18 +143,6 @@ img {
 .desktop-nav a[href="gallery-embed.html"] {
   font-size: 1.05rem;
   line-height: 1;
-}
-
-.desktop-nav a[href="gallery-embed.html"]:hover {
-  color: #6f3f20;
-}
-
-.overlay-nav a[href="gallery-embed.html"] {
-  color: #e8b77e;
-}
-
-.overlay-nav a[href="gallery-embed.html"]:hover {
-  color: #fff1df;
 }
 
 .menu-toggle {
