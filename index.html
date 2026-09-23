@@ -12,6 +12,15 @@
   <link rel="preload" as="image" href="./static/img/hero-collage-mobile.jpg" media="(max-width: 860px)" fetchpriority="high">
   <link rel="stylesheet" href="./css/editorial-home.css?v=20260923-gallery-nav">
   <link rel="icon" href="favicon.ico">
+  <style>
+    .gallery-nav-link {
+      display: inline-block;
+      font-family: "Bodoni Moda", serif !important;
+      font-style: italic !important;
+      font-weight: 700 !important;
+      transform: skewX(-8deg);
+    }
+  </style>
 </head>
 <body class="home-page">
   <header class="site-header">
@@ -24,7 +33,7 @@
         <a href="#awards">Awards</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
-        <a href="gallery-embed.html">Gallery</a>
+        <a class="gallery-nav-link" href="gallery-embed.html">Gallery</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
         <span>Menu</span>
@@ -42,7 +51,7 @@
         <a href="#awards">Awards</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
-        <a href="gallery-embed.html">Gallery</a>
+        <a class="gallery-nav-link" href="gallery-embed.html">Gallery</a>
         <!-- <a href="index-zh.html">中文</a> -->
       </nav>
     </div>
