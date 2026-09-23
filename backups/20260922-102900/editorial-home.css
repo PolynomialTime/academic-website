@@ -131,33 +131,6 @@ img {
   color: var(--accent);
 }
 
-.desktop-nav a[href="gallery-embed.html"],
-.overlay-nav a[href="gallery-embed.html"] {
-  color: var(--accent);
-  font-family: "Bodoni Moda", serif;
-  font-style: italic;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: none;
-}
-
-.desktop-nav a[href="gallery-embed.html"] {
-  font-size: 1.05rem;
-  line-height: 1;
-}
-
-.desktop-nav a[href="gallery-embed.html"]:hover {
-  color: #6f3f20;
-}
-
-.overlay-nav a[href="gallery-embed.html"] {
-  color: #e8b77e;
-}
-
-.overlay-nav a[href="gallery-embed.html"]:hover {
-  color: #fff1df;
-}
-
 .menu-toggle {
   border: 1px solid var(--line-strong);
   background: rgba(255, 252, 246, 0.72);
@@ -599,20 +572,8 @@ img {
   padding: 18px 0 0;
 }
 
-.award-service-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
-  gap: 24px;
-}
-
-.award-service-grid .list-panel {
-  padding: 20px;
-  border-top: 1px solid var(--line-strong);
-}
-
 #about,
 #experience,
-#awards,
 #projects,
 #talks {
   display: grid;
@@ -623,7 +584,6 @@ img {
 
 #about .section-head,
 #experience .section-head,
-#awards .section-head,
 #projects .section-head,
 #talks .section-head {
   min-width: 0;
@@ -632,7 +592,6 @@ img {
 
 #about .section-head h2,
 #experience .section-head h2,
-#awards .section-head h2,
 #projects .section-head h2,
 #talks .section-head h2 {
   font-size: clamp(2.1rem, 3.4vw, 3.1rem);
@@ -641,30 +600,18 @@ img {
 
 #about .intro-grid,
 #experience .timeline,
-#awards .award-service-grid,
-#projects > .project-item,
+#projects > p,
+#projects > .chip-row,
 #talks .split-layout {
   grid-column: 2;
 }
 
-#projects .project-item {
-  padding-top: 16px;
-  border-top: 1px solid var(--line-strong);
+#projects > p {
+  margin-top: 0;
 }
 
-#projects .project-item h3 {
-  margin: 0;
-  font-family: "Bodoni Moda", serif;
-  font-size: 1.75rem;
-  line-height: 1.05;
-}
-
-#projects .project-item p {
-  margin: 8px 0 0;
-}
-
-#projects .project-item .chip-row {
-  margin-top: 14px;
+#projects > .chip-row {
+  margin-top: 16px;
 }
 
 .pub-list {
@@ -881,24 +828,15 @@ img {
   padding: 14px 0 0;
 }
 
-.home-page .award-service-grid {
-  gap: 16px;
-}
-
-.home-page .award-service-grid .list-panel {
-  padding: 16px;
-}
-
 .home-page #about,
 .home-page #experience,
-#awards,
 .home-page #projects,
 .home-page #talks {
   column-gap: 24px;
 }
 
-.home-page #projects .project-item .chip-row {
-  margin-top: 10px;
+.home-page #projects > .chip-row {
+  margin-top: 12px;
 }
 
 .home-page .pub-list {
@@ -994,7 +932,6 @@ img {
 
   #about,
   #experience,
-  #awards,
   #projects,
   #talks {
     display: block;
@@ -1002,7 +939,6 @@ img {
 
   #about .section-head,
   #experience .section-head,
-  #awards .section-head,
   #projects .section-head,
   #talks .section-head {
     margin-bottom: 20px;
@@ -1012,11 +948,6 @@ img {
     grid-template-columns: 1fr;
     gap: 0;
     margin-top: 24px;
-  }
-
-  .award-service-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .compact-triad .section-block + .section-block {
