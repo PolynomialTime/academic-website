@@ -133,9 +133,9 @@ img {
 
 .desktop-nav a[href="gallery-embed.html"],
 .overlay-nav a[href="gallery-embed.html"] {
-  font-family: "Bodoni Moda", serif;
-  font-style: italic;
-  font-weight: 700;
+  font-family: "Bodoni Moda", serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
   letter-spacing: 0.06em;
   text-transform: none;
 }
