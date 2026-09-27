@@ -109,6 +109,7 @@ img {
   align-items: center;
   justify-content: flex-end;
   gap: 26px;
+  min-height: 2.5rem;
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;
@@ -133,16 +134,20 @@ img {
 
 .desktop-nav a[href="gallery-embed.html"],
 .overlay-nav a[href="gallery-embed.html"] {
-  font-family: "Bodoni Moda", serif !important;
-  font-style: italic !important;
-  font-weight: 700 !important;
+  font-family: "Zapfino", cursive !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
   letter-spacing: 0.06em;
   text-transform: none;
 }
 
 .desktop-nav a[href="gallery-embed.html"] {
-  font-size: 1.05rem;
+  font-size: 0.62rem;
   line-height: 1;
+}
+
+.overlay-nav a[href="gallery-embed.html"] {
+  font-size: clamp(1.3rem, 3vw, 2.7rem);
 }
 
 .menu-toggle {
