@@ -132,8 +132,8 @@ img {
   color: var(--accent);
 }
 
-.desktop-nav a[href="gallery-embed.html"],
-.overlay-nav a[href="gallery-embed.html"] {
+.desktop-nav .gallery-nav-link,
+.overlay-nav .gallery-nav-link {
   font-family: "Zapfino", cursive !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -142,12 +142,12 @@ img {
   text-transform: none;
 }
 
-.desktop-nav a[href="gallery-embed.html"] {
+.desktop-nav .gallery-nav-link {
   font-size: 0.54rem;
   line-height: 1;
 }
 
-.overlay-nav a[href="gallery-embed.html"] {
+.overlay-nav .gallery-nav-link {
   font-size: clamp(1.3rem, 3vw, 2.7rem);
 }
 
