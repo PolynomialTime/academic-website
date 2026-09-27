@@ -137,6 +137,7 @@ img {
   font-family: "Zapfino", cursive !important;
   font-style: normal !important;
   font-weight: 400 !important;
+  font-variant-caps: normal;
   letter-spacing: 0.06em;
   text-transform: none;
 }
